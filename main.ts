@@ -13,6 +13,8 @@
 // text, no stage directions, hashtags, or explanation.
 //
 // Pass 1: seven candidates (C1-C7). Pass 2 added three challengers (C8-C10).
+// Verified at runtime by the parent session 2026-11-25: winner "Cold Starter",
+// 89 bytes / 89 chars, 18 words, 30/30, gate OK; output byte-identical to the winning line.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
@@ -83,6 +85,28 @@ const CANDIDATES: Candidate[] = [
     line: "One star: I asked for the weekend to go and Monday brought it back on Tuesday, cold.",
     scores: [2, 1, 2, 2, 2],
     why: "one-star review; weekend-to-go is a restaurant thing but little actually goes wrong with a dish, table, server or bill; weekend returned cold on Tuesday is Monday-only; tight; plain text, 17 words",
+  },
+  // Pass 2 challengers (C8-C10).
+  {
+    id: "C8",
+    title: "Three Coffees",
+    line: "One star: three coffees in, the waiter still hadn't taken my order, and the special was a meeting that could've been an email.",
+    scores: [2, 2, 2, 1, 2],
+    why: "one-star review; waiter never took the order + the special are real complaints; three coffees in + the meeting that could've been an email is peak Monday; 23 words / 126 chars is the longest, needs trimming to retype; plain text, 23 words",
+  },
+  {
+    id: "C9",
+    title: "Leftovers",
+    line: "One star: Monday reheated Sunday's leftovers, called it the special, and charged my whole week for it.",
+    scores: [2, 2, 2, 2, 2],
+    why: "one-star review; reheated leftovers as the special + charged the whole week are real complaints; Sunday's leftovers is Monday-only; tight, turn lands at the end; plain text, 17 words",
+  },
+  {
+    id: "C10",
+    title: "Two Courses",
+    line: "One star: the waiter brought my alarm clock as the starter and the commute as the main course.",
+    scores: [2, 2, 2, 2, 2],
+    why: "one-star review; starter + main course are real dishes gone wrong; alarm clock + commute are Monday morning itself; tight, two-beat, quotable; plain text, 18 words",
   },
 ];
 
